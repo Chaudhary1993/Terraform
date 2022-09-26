@@ -19,3 +19,7 @@ variable "AMI_ID" {
   type = string
   default = "ami-024c319d5d14b463e"
 }
+
+variable "PATH_TO_PUBLIC_KEY" {
+  default = "levelup_key.pub"
+}
