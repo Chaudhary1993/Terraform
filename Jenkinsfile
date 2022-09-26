@@ -24,7 +24,6 @@ node{
   stage ('terraform destroy'){
     if ("${step}"=="destroy"){
      withCredentials([string(credentialsId: 'aws-key', variable: 'key'), string(credentialsId: 'aws-sec', variable: 'sec')]) {
-       sh 'ls -lrt -a'
        sh 'terraform destroy -var AWS_ACCESS_KEY="${key}" -var AWS_SECRET_KEY="${sec}" -auto-approve'
         }
       }
